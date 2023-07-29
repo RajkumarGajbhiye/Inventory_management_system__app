@@ -70,6 +70,22 @@ It is a MERN stack app where we can add product,Buyers and supplier and also edi
 ```
 git clone https://github.com/RajkumarGajbhiye/Inventory_management_app.git
 ```
+## Env Variables
+
+Create a .env file in the root and add the following
+
+```
+NODE_ENV = development
+PORT = 2000
+DATABASE_PASSWORD  
+DATABASE_USERNAME 
+DATABASE_CONNECTION_STRING 
+JWT_SECRET_KEY
+JWT_EXPIRY 
+
+RAZORPAY_KEY_ID
+RAZORPAY_KEY_SECRET
+```
 
 ## Install Dependencies (frontend & backend)
 
