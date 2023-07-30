@@ -3,6 +3,7 @@
 It is a MERN stack app where we can add product,Buyers and supplier and also edit and delete them and can take order and also payment the order.
 
 ## Deployment Link:
+https://inventory-management-system-app.vercel.app/
 
 
 ## Features:
