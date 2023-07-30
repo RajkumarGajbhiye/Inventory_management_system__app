@@ -110,4 +110,21 @@ npm run dev
 cd backend
 npm start
 ```
+## For Payment:
+
+<ul>
+<li>Click on card</li>
+<li>Enter card number</li>
+<li>Type expire</li>
+<li>Type cvv</li>
+<li>Click pay now</li>
+<li>pay without saving card</li>
+<li>Type any random otp Number</li>
+</ul>
+
+
+card No : 4111 1111 1111 1111
+expire: random date
+cvv: random
+
 
