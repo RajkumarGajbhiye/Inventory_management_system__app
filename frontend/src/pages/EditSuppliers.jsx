@@ -33,7 +33,7 @@ const navigate= useNavigate()
   useEffect(() => {
     let authToken = localStorage.getItem("token");
     axios
-      .get(`http://localhost:2000/suppliersDetails/api/v1/suppliers/${_id}`, {
+      .get(`https://inventory-management-system-api-hkw5.onrender.com/suppliersDetails/api/v1/suppliers/${_id}`, {
         headers: {
           authorization: `Bearer ${authToken}`,
         },
@@ -52,7 +52,7 @@ const navigate= useNavigate()
   const populateData = () => {
     let authToken = localStorage.getItem("token");
     axios
-      .patch("http://localhost:2000/suppliersDetails/api/v1/suppliers", edit, {
+      .patch("https://inventory-management-system-api-hkw5.onrender.com/suppliersDetails/api/v1/suppliers", edit, {
         headers: {
           authorization: `Bearer ${authToken}`,
         },

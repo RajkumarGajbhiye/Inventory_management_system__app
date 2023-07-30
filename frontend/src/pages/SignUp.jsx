@@ -41,7 +41,7 @@ const SignUp = () => {
     });
 
     axios
-      .post("http://localhost:2000/auth/api/v1/signUp", info)
+      .post("https://inventory-management-system-api-hkw5.onrender.com/auth/api/v1/signUp", info)
       .then((res) => {
         console.log(res.data);
       })

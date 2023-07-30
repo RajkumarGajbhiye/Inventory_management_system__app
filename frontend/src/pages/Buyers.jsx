@@ -60,7 +60,7 @@ const Buyers = () => {
 
   const displayData = () => {
     axios
-      .get("http://localhost:2000/buyerDetails/api/v1/buyers")
+      .get("https://inventory-management-system-api-hkw5.onrender.com/buyerDetails/api/v1/buyers")
       .then((res) => {
         console.log(res.data.data);
         setTable(res.data.data);
@@ -81,7 +81,7 @@ const Buyers = () => {
       authorization: `Bearer ${authToken}`,
     };
     axios
-      .delete("http://localhost:2000/buyerDetails/api/v1/buyers", {
+      .delete("https://inventory-management-system-api-hkw5.onrender.com/buyerDetails/api/v1/buyers", {
         headers,
         data,
       })
@@ -115,7 +115,7 @@ const Buyers = () => {
   const handleadd = () => {
     let authToken = localStorage.getItem("token");
     axios
-      .post("http://localhost:2000/buyerDetails/api/v1/buyers", inputdata, {
+      .post("https://inventory-management-system-api-hkw5.onrender.com/buyerDetails/api/v1/buyers", inputdata, {
         headers: {
           authorization: `Bearer ${authToken}`,
         },

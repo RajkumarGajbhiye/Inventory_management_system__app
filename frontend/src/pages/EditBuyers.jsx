@@ -33,7 +33,7 @@ const EditBuyers = () => {
   useEffect(() => {
     let authToken = localStorage.getItem("token");
     axios
-      .get(`http://localhost:2000/buyerDetails/api/v1/buyers/${_id}`, {
+      .get(`https://inventory-management-system-api-hkw5.onrender.com/buyerDetails/api/v1/buyers/${_id}`, {
         headers: {
           authorization: `Bearer ${authToken}`,
         },
@@ -52,7 +52,7 @@ const EditBuyers = () => {
   const populateData = () => {
     let authToken = localStorage.getItem("token");
     axios
-      .patch("http://localhost:2000/buyerDetails/api/v1/buyers", edit, {
+      .patch("https://inventory-management-system-api-hkw5.onrender.com/buyerDetails/api/v1/buyers", edit, {
         headers: {
           authorization: `Bearer ${authToken}`,
         },

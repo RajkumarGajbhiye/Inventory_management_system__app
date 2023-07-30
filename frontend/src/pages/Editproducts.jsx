@@ -35,7 +35,7 @@ const Editproducts = () => {
   useEffect(() => {
     let authToken = localStorage.getItem("token");
     axios
-      .get(`http://localhost:2000/productsDetails/api/v1/products/${_id}`, {
+      .get(`https://inventory-management-system-api-hkw5.onrender.com/productsDetails/api/v1/products/${_id}`, {
         headers: {
           authorization: `Bearer ${authToken}`,
         },
@@ -54,7 +54,7 @@ const Editproducts = () => {
   const populateData = () => {
     let authToken = localStorage.getItem("token");
     axios
-      .patch("http://localhost:2000/productsDetails/api/v1/products", edit, {
+      .patch("https://inventory-management-system-api-hkw5.onrender.com/productsDetails/api/v1/products", edit, {
         headers: {
           "Content-Type": "application/json",
           authorization: `Bearer ${authToken}`,

@@ -37,7 +37,7 @@ const Login = () => {
       password: data.get("password"),
     });
     axios
-      .post("http://localhost:2000/auth/api/v1/signIn", storeData)
+      .post("https://inventory-management-system-api-hkw5.onrender.com/auth/api/v1/signIn", storeData)
       .then((res) => {
         console.log("Data:", res);
         localStorage.setItem("token", res.data.token);

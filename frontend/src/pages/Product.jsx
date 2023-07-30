@@ -62,7 +62,7 @@ const Product = () => {
 
   const displayData = () => {
     axios
-      .get("http://localhost:2000/productsDetails/api/v1/products")
+      .get("https://inventory-management-system-api-hkw5.onrender.com/productsDetails/api/v1/products")
       .then((res) => {
         console.log(res.data.data);
         setTable(res.data.data);
@@ -76,7 +76,7 @@ const Product = () => {
     let authToken = localStorage.getItem("token");
     axios
       .post(
-        "http://localhost:2000/productsDetails/api/v1/products",
+        "https://inventory-management-system-api-hkw5.onrender.com/productsDetails/api/v1/products",
         inputdata,
         {
           headers: {
@@ -131,7 +131,7 @@ const Product = () => {
       authorization: `Bearer ${authToken}`,
     };
     axios
-      .delete("http://localhost:2000/productsDetails/api/v1/products", {
+      .delete("https://inventory-management-system-api-hkw5.onrender.com/productsDetails/api/v1/products", {
         headers,
         data,
       })

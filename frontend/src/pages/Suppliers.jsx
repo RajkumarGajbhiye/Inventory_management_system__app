@@ -57,7 +57,7 @@ const Suppliers = () => {
 
   const displayData = () => {
     axios
-      .get("http://localhost:2000/suppliersDetails/api/v1/suppliers")
+      .get("https://inventory-management-system-api-hkw5.onrender.com/suppliersDetails/api/v1/suppliers")
       .then((res) => {
         console.log(res.data.data);
         setTable(res.data.data);
@@ -78,7 +78,7 @@ const Suppliers = () => {
       authorization: `Bearer ${authToken}`,
     };
     axios
-      .delete("http://localhost:2000/suppliersDetails/api/v1/suppliers", {
+      .delete("https://inventory-management-system-api-hkw5.onrender.com/suppliersDetails/api/v1/suppliers", {
         headers,
         data,
       })
@@ -113,7 +113,7 @@ const Suppliers = () => {
     let authToken = localStorage.getItem("token");
     axios
       .post(
-        "http://localhost:2000/suppliersDetails/api/v1/suppliers",
+        "https://inventory-management-system-api-hkw5.onrender.com/suppliersDetails/api/v1/suppliers",
         inputdata,
         {
           headers: {

@@ -111,7 +111,7 @@ const Order = () => {
 
   const displayData = () => {
     axios
-      .get("http://localhost:2000/admin/new/order")
+      .get("https://inventory-management-system-api-hkw5.onrender.com/admin/new/order")
       .then((res) => {
         console.log(res.data.data);
         setTable(res.data.data);
@@ -126,7 +126,7 @@ const Order = () => {
   const handleAdd = () => {
     let authToken = localStorage.getItem("token");
     axios
-      .post("http://localhost:2000/admin/new/order", inputdata, {
+      .post("https://inventory-management-system-api-hkw5.onrender.com/admin/new/order", inputdata, {
         headers: {
           authorization: `Bearer ${authToken}`,
         },
@@ -156,7 +156,7 @@ const Order = () => {
   //payment:
   const handlepayment = async (amount) => {
     let show = { amount: amount };
-    let purchase = await axios.post("http://localhost:2000/api/checkout", show);
+    let purchase = await axios.post("https://inventory-management-system-api-hkw5.onrender.com/api/checkout", show);
     console.log(purchase.data.order.amount);
     const options = {
       key: "rzp_test_iUQGcGe7fxBsbO",
@@ -170,7 +170,7 @@ const Order = () => {
 
       handler: function (response) {
         axios
-          .post("http://localhost:2000/api/paymentVerification", response)
+          .post("https://inventory-management-system-api-hkw5.onrender.com/api/paymentVerification", response)
           .then((res) => {
             console.log(res.data);
           })
@@ -205,7 +205,7 @@ const Order = () => {
       authorization: `Bearer ${authToken}`,
     };
     axios
-      .delete("http://localhost:2000/admin/new/order", { headers, data })
+      .delete("https://inventory-management-system-api-hkw5.onrender.com/admin/new/order", { headers, data })
       .then((res) => {
         setisDelete(!isDelete);
         dispatch(refreshComponent());
