@@ -60,9 +60,9 @@ const Login = () => {
       theme: "colored",
     });
   
-setTimeout(()=>{
+
   navigate("/product");
-},2000)
+
    
   };
 
