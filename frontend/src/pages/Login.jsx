@@ -29,41 +29,33 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-    axios
-      .post("https://inventory-management-system-api-hkw5.onrender.com/auth/api/v1/signIn", storeData)
-      .then((res) => {
-        console.log("Data:", res);
-        localStorage.setItem("token", res.data.token);
-      })
-      .catch((err) => {
-        console.log(err);
+  const handleSubmit = async(event) => {
+    try{
+      event.preventDefault();
+    
+      const {data} = await axios.post("https://inventory-management-system-api-hkw5.onrender.com/auth/api/v1/signIn", storeData)
+        
+          console.log("Data:", data);
+          localStorage.setItem("token",data.token);
+      setStoreData({
+        email: "",
+        password: "",
       });
-    setStoreData({
-      email: "",
-      password: "",
-    });
-    toast.success("successful login!", {
-      position: "bottom-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
+      toast.success("successful login!", {
+        position: "bottom-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    navigate("/product");
   
-
-  navigate("/product");
-
-   
+    }catch(err){
+      toast.error("check your credentials")
+    }
   };
 
   const handleChange = (e) => {
