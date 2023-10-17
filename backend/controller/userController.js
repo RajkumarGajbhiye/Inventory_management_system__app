@@ -50,6 +50,7 @@ const signIn = catchErrorAsync(async(req,res,next)=>{
     res.cookie('jwt',token,{
         expire:new Date(Date.now() + parseInt(process.env.JWT_EXPIRY) *24 * 60 * 60 * 1000),
     });
+console.log(res.cookie)
 
     res.status(200).json({
         status:"successful Sign In",
