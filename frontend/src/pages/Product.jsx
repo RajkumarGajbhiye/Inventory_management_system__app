@@ -312,7 +312,7 @@ const Product = () => {
                       <img
                         width="30px"
                         height="30px"
-                        src="https://img.icons8.com/external-others-inmotus-design/67/000000/external-Edit-virtual-keyboard-others-inmotus-design.png"
+                        src="https://img.icons8.com/external-anggara-blue-anggara-putra/32/external-edit-ui-basic-anggara-blue-anggara-putra.png" alt="external-edit-ui-basic-anggara-blue-anggara-putra"
                         onClick={() => redirectEditPage(row._id)}
                       />
                       <img
